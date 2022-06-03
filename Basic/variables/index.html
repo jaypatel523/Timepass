@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> This is javascript variables </h1>
+
+
+
+
+
+    <!-- This is javascript code  -->
+    <script>
+
+        var name = "Jay"; // variable names are case sensitive
+        // console.log(name);
+
+        // This will also print the name (not error)
+        // var name = "Devi";
+        // console.log(name);
+
+        // name = "Devi";
+        // console.log(name);
+
+        // This will also word
+        // my = "chiku";
+        // console.log(my);
+
+        var number = 2;
+        // console.log(number);
+        // console.log(number * 5); // multiply
+        // console.log(number ** 5);   // power
+
+        // var number = 10; 
+
+        // let str = "Jay";
+        // console.log(str);
+        // let str = "Devi"; // This will give error 
+
+
+        function greet_let()
+        {
+            let str = "Virat";
+
+            if(str == 'Virat')
+            {
+                let str2 = "chiku";
+            }
+            // console.log(str2);         // you can not use let variable outside block
+        }
+
+        // greet_let();
+
+        function greet_var()
+        {
+            var s = "Virat";
+
+            if(s == 'Virat')
+            {
+                var s2 = "chiku";
+            }
+
+            console.log(s2);  // now we can use s2 here 
+
+        }
+
+        // greet_var();
+
+
+        /*
+
+                    let                            var
+
+            -> block scope                  -> local scope
+            ->can not redeclare             -> can redeclare
+
+        */
+
+    
+        const n = 10;  // block scope
+        // n = 200; // error
+        console.log(n);
+
+
+        // This will also give an error (const must be assigned when declared)
+        // const m;
+        // m = 10;
+
+
+    </script>
+</body>
+</html>

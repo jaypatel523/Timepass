@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h1> This is array </h1>
+
+
+    <script> 
+
+
+
+        /********************** array ***********************************/ 
+        
+        
+        let numbers = [1,2,3,4,5,6,7,0,0]; // This is an array of integers
+        let strings = ["ab", "adsf", "asdf", "jkl;", "jay", "strings"];  // This is an array of strings
+        
+        let len = numbers.length;
+        // console.log(len);
+        
+        
+        
+        // console.log(numbers);
+        // console.log(numbers[0]);
+        // console.log(numbers[numbers.length - 1]);
+        
+        
+        // let mix = [1, "string", null, undefined, "This is mix array"];
+        // console.log(mix);
+        
+        
+        /********************** check array ***********************************/ 
+        
+        
+        // console.log(typeof numbers); // This will print object so we will use isArray function to check it is array or not
+        // console.log(Array.isArray(numbers));
+        
+        
+        
+        
+        /********************** some array methods ***********************************/ 
+        
+        // var arr1 = [5,2,1,4,6,7];
+        // console.log(arr1);
+        
+        // arr1.push(100);
+        // console.log(arr1);
+        
+        // arr1.pop();
+        // var poped = arr1.pop();
+        // console.log(arr1);
+        // console.log("Poped element is : ", poped);
+        
+        
+        
+        // arr1.unshift(500);   // insert at starting of an array 
+        // console.log(arr1);
+        
+        // var shift = arr1.shift();
+        // console.log(arr1);
+        // console.log("Shifted element is : ", shift);   // remove starting element
+        
+        
+        /********************** how to clone array ***********************************/ 
+        
+        // let arr1 = [1, 2, 3, 4, 5];
+        // let arr2 = arr1.slice(0);
+        // let arr2 = [].concat(arr1);
+        // let arr2 = [...arr1];  // using spread operator
+        
+        // arr1.push(6);
+        
+        // console.log(arr1 === arr2);
+        // console.log(arr1);
+        // console.log(arr2);
+        
+        // let arr2 = arr1.slice(0).concat(100, 200);
+        // let arr2 = [].concat(arr1, [100,200,400]);
+        // let arr2 = [...arr1, 10, 20, 30, 40];
+        // let arr2 = [...arr1, [10, 20, 30, 40]]; // This will create another array 
+        // let arr2 = [...arr1, ...arr1]; 
+        // console.log(arr2);
+        
+        /********************** print array ***********************************/ 
+        
+        // let arr1 = ["jay", "love", "devi", "so", "much"];
+        
+        // for(let i=0; i<arr1.length; i++)
+        // {
+            //     console.log(arr1[i].toUpperCase());
+            //     console.log(arr1[i].toLowerCase());
+            // }
+            
+            
+        /********************** use const for creating array ***********************************/ 
+        
+        
+        // const arr1 = ["This", "is", "string"];
+        // console.log(arr1); 
+        
+        // arr1 = [];// This gives me an error because of const
+        // we should use const to create all the reference type
+        
+        // arr1.push("in array");
+        // we can do all the operations on same array 
+        // console.log(arr1);
+        
+        
+        /********************** for loops ***********************************/ 
+
+        // let arr1 = ["This", "is", "for", "of", "loop"];
+
+        // for of loop (direct element)
+        // for(let element of arr1)
+        // {
+        //     console.log(element);
+        // }
+
+
+
+        // for in loop (with index)
+        // for(let index in arr1)
+        // {
+        //     console.log(index, "->", arr1[index]);
+        // }
+
+
+
+
+        /*************************** array destructuring ********************************/ 
+        /** Most useful topic and also most important **/ 
+
+        // let arr1 = ["Please", "god", "tc", "chiku"];
+        
+        // let [var1, var2] = arr1;
+        // let [var1, , var2] = arr1;
+        // let [var1, , , var2] = arr1;
+        // let [var1, var2, ...a] = arr1;
+
+        // console.log(var1, var2, a);
+
+        
+
+
+
+    </script>
+    
+</body>
+</html>

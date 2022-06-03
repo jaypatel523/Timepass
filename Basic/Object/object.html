@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Obejct in javascript </title>
+</head>
+<body>
+    <h1> This is object in javascript </h1>
+
+
+    <script> 
+
+        /*                            Basics about object                                 */
+
+
+
+
+        // key value pairs
+
+        // const person = {
+        //     Name : "jay",                   // keys are in string in javascript by default
+        //     Id : "20IT417",
+        //     Age : 18,
+        //     Array : ["1", "2", "3", "4", "5"]
+        // }
+
+        // console.log(typeof person);
+        // console.log(person);
+
+        // access every key value
+        // console.log(person.Name);
+        // console.log(person.Id);
+        // console.log(person.Age);
+        // console.log(person.Array);
+
+        // console.log(person['Name']);
+        // console.log(person["Name"]);
+        // keys are in string by default
+
+
+
+
+        // Add key-value pair in object
+
+        // person.Gender1 = "Male";
+        // person["Gender2"] = "Female";
+        // console.log(person);
+
+
+
+
+
+        /*              Difference between . notation and "" notation                 */
+
+
+
+
+        const person = {
+            Name : "jay",                   // keys are in string in javascript by default
+            Id : "20IT417",
+            Age : 18,
+            Array : ["1", "2", "3", "4", "5"],
+            // person hobby: "Cricket" // we can not access directly without ""
+            "person hobby" : "Cricket"
+        }
+
+        // console.log(person.person hobby); // we can not access directly without ""
+        // console.log(person["person hobby"]);
+
+        const key = "Email";
+
+        person[key] = "pateljay0523@gmail.com";
+
+        // console.log(person);
+
+
+
+
+        /*                              Iterate through object                             */
+
+        // for in
+        // object.keys
+
+        
+        for(let key in person)
+        {
+            // console.log(key);
+            // console.log(person[key]);
+            // console.log(key, " : ", person[key]);
+            // console.log(`${key} : ${person[key]}`);
+        }
+
+
+        // console.log(Object.keys(person));
+        // console.log(Array.isArray(Object.keys(person)));
+
+        for(let key of Object.keys(person))
+        {
+            // console.log(person[key]);
+        }
+
+
+
+
+        /*                              Computed Properties                             */ 
+
+        const key1 = "k1";
+        const key2 = "k2";
+
+        const value1 = "val-1";
+        const value2 = "val-2";
+
+
+        // This is method of my thinking
+        // const object = {}
+
+        // object[key1] = value1;
+        // object[key2] = value2;
+
+        // console.log(object);
+
+
+
+
+        // This is using computed properties
+
+        const object = {
+            [key1] : value1, // computed property
+            [key2] : value2
+        }
+
+        // console.log(object);
+
+
+
+
+        /*                              spread operator in object                   */ 
+
+        const arr1 = [1,2,3];
+        const arr2 = [4,5,6];
+
+
+        // use in arrays 
+        // const newArr = [...arr1, ...arr2];
+
+        // const newArr = [..."12345667"];
+
+        // console.log(newArr);
+
+
+        // now in object
+
+        // const timePass = {..."abcdefghijklmnopqrstuvwxyz"}
+        // const timePass = {...[1,2,3,4,5,6,7,8,9,10]}
+        // console.log(timePass);
+
+        const obj1 = {
+            name : "Jay",
+            Id : "20IT417"
+        }
+
+        const obj2 = {
+            age : "18",
+            gender : "male"
+        }
+
+
+        // const newObj = {...obj, gender: "Male"}
+        // const newObj = {...obj1 , ...obj2}
+
+        // console.log(newObj);
+
+
+
+
+
+
+        /*                              Object Destructuring                            */ 
+
+        const des = {
+            name : "jay",
+            id : "20IT417",
+            age : "18",
+            gender: "male"
+        }
+
+        // const {name , age} = des;
+        // const {name, age, ...arr} = des;  // arr will become object
+        // console.log(arr);
+        // console.log(name, age);
+        
+        // const {name: var1, id: var2, age: var3} = des;
+        // console.log(var1, var2, var3);
+
+
+
+
+
+
+
+        /*                              Object inside array                             */ 
+
+        const user = [
+            {Id: "1", Name: "Jay", Age: "18", Gender: "Male"},
+            {Id: "2", Name: "Vanita", Age: "45", Gender: "Female"},
+            {Id: "3", Name: "Rajesh", Age: "45", Gender: "Male"},
+            {Id: "4", Name: "Harshil", Age: "16", Gender: "Male"}
+        ]
+
+        // console.log(user);
+        // console.log(Array.isArray(user));
+
+
+        for(let details of user)
+        {
+            // console.log(details);
+            // console.log(details.Id);
+        }
+
+
+        // const [user1, user2, user3, user4] = user;
+        // console.log(user1, user2, user3, user4);
+
+
+        // const [{Id}, {Name}, {Age}, {Gender}] = user;
+        // console.log(Id, Name, Age, Gender);
+
+
+        // const [{Id : user1Id}, {Name : user2Name}, {Age : user3Age}, {Gender : user4Gender}] = user;
+        // console.log(user1Id, user2Name, user3Age, user4Gender);
+
+        
+
+
+
+        
+    </script>
+</body>
+</html>

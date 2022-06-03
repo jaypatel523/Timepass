@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> string </title>
+</head>
+<body>
+    <h1> THis is string </h1>
+
+    <script>
+
+        var str1 = "This is string";
+        // console.log(str);
+
+        // console.log(str.length);
+        // console.log(str[str.length - 1]);
+
+
+        /********************************* trim ***********************************/
+
+
+        var str2 = "       This is string     ";
+
+        // console.log(str2.length);
+
+
+        // str2.trim(); 
+        // This will not work because this function will return a new string without spaces
+
+
+        var newstr2WithTrim = str2.trim();
+        // console.log(newstr2WithTrim.length);
+
+
+
+
+        /******************************* toUpperCase and toLowerCase *********************************/
+        
+        var str3 = "This is string";
+        
+        str3 = str3.toUpperCase();
+        
+        // console.log(str3);
+        
+        str3 = str3.toLowerCase();
+        
+        // console.log(str3);
+        
+        
+        /******************************* slice *********************************/
+        
+        
+        var str4 = "This is string";
+        
+        // str3 = str3.slice(starting index, ending index);  // does not include ending index
+        // str3 = str3.slice(0, 1);
+        // console.log(str3);
+        
+        // var str4 = str3.slice(0, 3);
+        // console.log(str4);
+        
+        // str3 = str3.slice(0, 5);
+        // console.log(str3);
+        
+        
+        /******************************* typeof *********************************/
+        
+        var str4 = "10";
+        
+        // console.log(typeof str4);
+
+        /******************************* converting string into integer and vice-versa *********************************/
+        
+        // str4 = "200";
+        
+        // console.log(typeof(str4));
+        
+        // str4 = +"200";
+        
+        // console.log(typeof(str4));
+        
+        
+        let number = 20;
+        
+        // console.log(typeof (number + "")); // This will convert number into string
+        
+        
+        
+        /******************************* concat *********************************/
+
+        // str4 = "This is string";
+
+        // var str5 = "and This is another string";
+
+        // console.log(str4 + " " + str5);
+
+
+
+        // str4 = "10";
+        // str5 = "20";
+
+        // console.log(+str4 + +str5 ); // This will give us sum of two strings
+
+
+
+
+
+        /*********************************** template string ********************************/
+
+        var name = "Jay";
+        var age = 18;
+
+        // var ans = "My name is " + name + ". I'm " + age + "years old.";
+        // var ans = `My name is ${name} and my age is ${age}`;
+
+        // console.log(ans);
+
+
+        /************************************ undefined null and BinInt ***************************/
+
+        // var name1;
+        // console.log(typeof name1);
+        // name = null;
+        // console.log(typeof name1);
+        // console.log(typeof null);
+
+        // var n1 = BigInt(10);
+        // console.log(typeof n1);
+
+        // var n2 = 20n;
+        // console.log(typeof n2);
+
+        // console.log(n1 + n2);
+
+
+        /************************************* bool **********************************/
+
+
+        let n1 = 10;
+        // let n2 = 20;
+        let n3 = "10";
+
+        // console.log(n1 < n2);
+        // console.log(n1 > n2);
+ 
+        // console.log(n1 == n3);   // it will not check data type 
+        // console.log(n1 === n3);  // it will check data type
+
+
+        // console.log(n1 != n3);  // only value
+        // console.log(n1 !== n3);  // value with data type
+
+
+        // falsy value = false, 0, "", null, undefined
+
+
+
+
+
+
+    </script>
+</body>
+</html>
