@@ -149,6 +149,12 @@
 // ul.append(li);
 // ul.prepend(cloneLi);
 
+// after creating todo list project
+// let newTodo = document.createElement("li");
+// newTodo.textContent = "This is new Todo";
+// let todoList = document.querySelector(".todo-list");
+// todoList.append(newTodo);
+
 
 
 
