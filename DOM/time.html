@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Timing Events </title>
+    <style>
+        body {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+        }
+        span{
+            display: none;
+            border: 1px solid black;
+            padding: 1rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        button {
+            width: 200px;
+            padding: 1rem;
+            border: 1px solid black;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    </style>
+    <!-- <script src="time.js" defer> </script>  -->
+</head>
+
+<body>
+    <div class="container">
+        <button class="btn"> Get Time </button>
+        <span id="time"></span>
+    </div>
+
+
+
+    <script>
+
+        let spanTime = document.getElementById("time");
+        let button = document.querySelector(".btn");
+
+        button.addEventListener("click", getTime);
+
+        function getTime(){
+
+            const d = new Date();
+            let h = d.getHours();
+            let m = d.getMinutes();
+            let s = d.getSeconds();
+
+            button.textContent = "Time is";
+            spanTime.style.display = "block";
+            spanTime.textContent = h + ":" + m + ":" + s;
+
+            setTimeout(getTime, 1000);
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+

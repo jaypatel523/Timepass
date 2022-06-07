@@ -86,11 +86,11 @@
     cursor: pointer;
     transition: all 0.5s;
 }
-#edit:hover{
+.container .list button:nth-child(1):hover{
     background-color: green;
     color: white;
 }
-#delete:hover{
+.container .list button:nth-child(2):hover{
     background-color: red;
     color: white;
 }

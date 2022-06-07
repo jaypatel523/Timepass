@@ -1,30 +1,36 @@
-// let submit = document.querySelector(".enterTask button");
-// let ul = document.querySelector(".list .ul .li");
+let submit = document.querySelector(".enterTask button");
 
+submit.addEventListener("click", function(){
+    
+    let inputText = document.querySelector("#task");
+    let inputValue = inputText.value;
+    
+    if(inputValue.length > 0)
+    {
+        let ul = document.querySelector(".list .ul .li");
+        let li = document.createElement("li");
 
-// submit.addEventListener("click", function(){
-//     let li = document.createElement("li");
-//     let editBtn = document.createElement("button");
-//     editBtn.className = "todoBtn";
-//     editBtn.appendChild(document.createTextNode("Edit"))
+        li.appendChild(document.createTextNode(inputText.value));
+        
+        let div = document.createElement("div");
+        div.className = "todoBtn";
+        
+        let editButton = document.createElement("button");
+        editButton.appendChild(document.createTextNode("Edit"));
+        
+        let deleteButton = document.createElement("button");
+        deleteButton.appendChild(document.createTextNode("Delete"));
+        
+        div.append(editButton);
+        div.append(deleteButton);
+        
+        ul.append(li);
+        li.append(div);
 
-//     let deleteBtn = document.createElement("button");
-//     deleteBtn.className = "todoBtn";
-//     deleteBtn.appendChild(document.createTextNode("Delete"))
+        inputText.value = '';
+    }
 
-//     let input = document.querySelector("#task");
-//     let listValue = input.value; 
-
-//     if(listValue.length != 0)
-//     {
-//         li.textContent = listValue;
-//         ul.appendChild(li);
-//         li.appendChild(editBtn);
-//         editBtn.appendChild(deleteBtn);
-
-//     }
-//     input.value = '';
-// })
+})
 
 
 
