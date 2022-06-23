@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Fetch API using XMLHttpRequest </title>
+</head>
+
+<body>
+
+    <script>
+
+        /*
+
+        const url = "https://jsonplaceholder.typicode.com/posts";
+        const xhr = new XMLHttpRequest();
+
+        // console.log(xhr);
+        // console.log(xhr.readyState);
+
+        xhr.open("GET", url);
+        // console.log(xhr.readyState);
+
+        // xhr.onreadystatechange = function(){
+        //     console.log(xhr.readyState);
+        // }
+
+        // xhr.onload = function(){
+        //     // console.log(xhr.readyState);
+        //     let res = xhr.response;
+        //     console.log(typeof res);
+        //     res = JSON.parse(res);
+        //     console.log(typeof res);
+        // }
+
+        xhr.onload = function(){
+            if(xhr.status >= 200 && xhr.status < 300)
+            {
+                let res = JSON.parse(xhr.response);
+                const id = res[0].id; // id 1 
+
+                const url2 = `${url}/${id}`;
+                const xhr2 = new XMLHttpRequest();
+
+                xhr2.open("GET", url2);
+
+                xhr2.onload = function(){
+                    if(xhr2.status >= 200 && xhr2.status < 300)
+                    {
+                        let res = JSON.parse(xhr2.response);
+                        console.log(res);
+                    }
+                }
+
+                xhr2.send();
+            }
+            else
+            {
+                console.log("something went wrong");
+            }
+        }
+
+
+        xhr.onerror = function(){
+            console.log("Network error");
+        }
+
+
+
+        xhr.send();
+
+
+        */
+
+        // promise
+
+        const url = "https://jsonplaceholder.typicode.com/posts";
+
+        function sendRequest(method, url) {
+            return new Promise((resolve, reject) => {
+                const xhr = new XMLHttpRequest();
+                xhr.open(method, url);
+
+                xhr.onload = function () {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        resolve(xhr.response);
+                    }
+                    else {
+                        reject("something went wrong");
+                    }
+                }
+
+                xhr.onerror = function () {
+                    reject("something went wrong");
+                }
+
+                xhr.send();
+
+            })
+        }
+
+        sendRequest("GET", url)
+            .then((response) => {
+                const data = JSON.parse(response);
+                return data;
+        })
+            .then((data) => {
+                const id = data[3].id;  // id = 4
+                return id;
+        })
+            .then((id) => {
+                const url2 = `${url}/${id}`;
+                return sendRequest("GET", url2);
+        })
+            .then((newRes) => {
+                // console.log(JSON.parse(newRes));
+        })
+
+
+
+
+
+    </script>
+</body>
+
+</html>
